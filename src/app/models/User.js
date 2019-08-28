@@ -28,6 +28,11 @@ class User extends Model {
     return this;
   }
 
+  static associate(models) {
+    // Criar relacionamento como HasMany, HasOne, etc.
+    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
+  }
+
   // Funções podem ser chamadas ao instaciar um novo usuário
   // por exemplo usando o findOne().
   checkPassword(password) {
