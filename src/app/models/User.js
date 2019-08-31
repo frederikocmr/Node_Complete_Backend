@@ -30,7 +30,7 @@ class User extends Model {
 
   static associate(models) {
     // Criar relacionamento como HasMany, HasOne, etc.
-    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
+    this.belongsTo(models.File, { foreignKey: 'avatar_id', as: 'avatar' });
   }
 
   // Funções podem ser chamadas ao instaciar um novo usuário
