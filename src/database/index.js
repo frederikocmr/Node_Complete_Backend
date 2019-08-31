@@ -26,7 +26,7 @@ class Database {
   mongo() {
     this.mongoConnection = Mongoose.connect(databaseConfig.mongoConfig, {
       useNewUrlParser: true,
-      useFindAndModify: true,
+      useFindAndModify: false,
     });
   }
 }
