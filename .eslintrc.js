@@ -18,7 +18,7 @@ module.exports = {
     "linebreak-style": 0,
     "class-methods-use-this": "off",
     "no-param-reassign": "off",
-    "camelCase": "off",
+    "camelcase": ["off", { "properties": "never" }],
     "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
   },
 };
