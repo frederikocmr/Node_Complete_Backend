@@ -60,6 +60,10 @@ class AppointmentController {
         .json({ error: 'You can only create appointments with providers!' });
     }
 
+    if (req.userId === provider_id) {
+      return res.status(401).json({ error: 'A provider can not be the user!' });
+    }
+
     // Check for past dates.
     const hourStart = startOfHour(parseISO(date));
 
@@ -85,7 +89,7 @@ class AppointmentController {
     const appointment = await Appointment.create({
       user_id: req.userId,
       provider_id,
-      date,
+      date: hourStart, // corrigido bug validação da data.
     });
 
     // Notify appointment provider using mongoDb.
