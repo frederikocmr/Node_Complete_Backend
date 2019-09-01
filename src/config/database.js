@@ -1,7 +1,9 @@
+const base_url = '192.168.99.100';
+
 module.exports = {
   postgresConfig: {
     dialect: 'postgres',
-    host: '192.168.99.100',
+    host: base_url,
     username: 'postgres',
     password: 'docker',
     database: 'iNails',
@@ -11,5 +13,9 @@ module.exports = {
       underscoredAll: true,
     },
   },
-  mongoConfig: 'mongodb://192.168.99.100:27017/iNails',
+  mongoConfig: `mongodb://${base_url}:27017/iNails`,
+  redisConfig: {
+    host: base_url,
+    port: 6379,
+  },
 };
