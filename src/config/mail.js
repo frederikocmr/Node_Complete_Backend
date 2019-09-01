@@ -1,11 +1,11 @@
 // Mailtrap config.
 export default {
-  host: 'smtp.mailtrap.io',
-  port: 2525,
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
   secure: false,
   auth: {
-    user: 'ba8d7fb374d771',
-    pass: '2708b9b27c470b',
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
   },
   default: {
     from: 'Equipe iNails <noreply@inails.com>',

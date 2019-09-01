@@ -1,21 +1,21 @@
-const base_url = '192.168.99.100';
+require('dotenv/config');
 
 module.exports = {
   postgresConfig: {
     dialect: 'postgres',
-    host: base_url,
-    username: 'postgres',
-    password: 'docker',
-    database: 'iNails',
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     define: {
       timestamps: true,
       underscored: true,
       underscoredAll: true,
     },
   },
-  mongoConfig: `mongodb://${base_url}:27017/iNails`,
+  mongoConfig: process.env.MONGO_URL,
   redisConfig: {
-    host: base_url,
-    port: 6379,
+    host: process.env.REDIS_HOST,
+    port: process.env.REDIS_PORT,
   },
 };
