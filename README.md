@@ -2,9 +2,9 @@
 
 A WORK IN PROGRESS for a complete Node back-end of the iNails app.
 
-Featuring Express.JS, Sequelize with PostgresSQL, Mongoose with MongoDB, Reidis with Bee-Queue, Multer, Handlebars, JWT, BCryptJS and Yup.
+Featuring Express.JS, Sequelize with PostgresSQL, Mongoose with MongoDB, Reidis with Bee-Queue, Multer, Handlebars, JWT, Sentry, BCryptJS and Yup.
 
-Integrated with Nodemon, Prettier, ESLint and Sucrase for development dependencies.
+Integrated with Nodemon, Prettier, Sequelize CLI, ESLint and Sucrase for development dependencies.
 
 ## Starting the application
 
